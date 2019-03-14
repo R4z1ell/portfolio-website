@@ -112,7 +112,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "C:\\Users\\creaw\\OneDrive\\Desktop\\Portfolio Website\\portfolio-website\\components\\Home.js";
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  html {\n    box-sizing: border-box;\n    font-size: 10px;\n  }\n\n  *,\n  *:before,\n  *:after {\n    box-sizing: inherit;\n  }\n\n  body {\n    padding: 0;\n    margin: 0;\n    font-size: 1.6rem;\n    line-height: 2;\n  }\n\n  a {\n    text-decoration: none;\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  html {\n    box-sizing: border-box;\n    font-size: 10px;\n  }\n\n  *,\n  *:before,\n  *:after {\n    margin: 0;\n    padding: 0;\n    box-sizing: inherit;\n  }\n\n  body {\n    padding: 0;\n    margin: 0;\n    overflow-x: hidden;\n    font-size: 1.6rem;\n    line-height: 2;\n  }\n\n  a {\n    text-decoration: none;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -135,13 +135,13 @@ var Home = function Home() {
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 40
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(GlobalStyle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 41
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("canvas", {
@@ -150,7 +150,7 @@ var Home = function Home() {
     height: "100vh",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 42
     },
     __self: this
   }));

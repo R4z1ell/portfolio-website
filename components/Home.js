@@ -11,12 +11,15 @@ const GlobalStyle = createGlobalStyle`
   *,
   *:before,
   *:after {
+    margin: 0;
+    padding: 0;
     box-sizing: inherit;
   }
 
   body {
     padding: 0;
     margin: 0;
+    overflow-x: hidden;
     font-size: 1.6rem;
     line-height: 2;
   }
