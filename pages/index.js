@@ -1,4 +1,4 @@
-import Home from '../components/Home';
+import Home from '../src/App/Home';
 
 const Index = () => (
   <div>
