@@ -9,7 +9,6 @@
     "start": "next start"
   },
   "dependencies": {
-    "animejs": "^3.0.1",
     "gsap": "^2.1.2",
     "next": "^8.0.3",
     "react": "^16.8.4",

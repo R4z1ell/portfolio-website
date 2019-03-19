@@ -56,11 +56,12 @@ const NavMenu = styled.div`
 `;
 
 const InnerContainer = styled.div`
-  position: absolute;
-  height: 100%;
+  position: fixed;
+  height: 100vh;
   width: 100%;
   left: 0;
   top: 0;
+  overflow: hidden;
   z-index: 20;
 
   .menu {
@@ -79,34 +80,42 @@ const InnerContainer = styled.div`
       font-family: 'Varela Round';
       font-size: 50px;
       text-transform: uppercase;
-    }
 
-    a {
-      text-decoration: none;
-      color: #222;
-      display: inline-block;
-      padding: 10px 0;
-      position: relative;
+      .text-underline {
+        text-decoration: none;
+        color: #fff;
+        display: inline-block;
+        padding: 1px;
+        position: relative;
 
-      &:hover {
-        &:before {
-          opacity: 1;
-          transform: translateX(0px);
+        &:hover {
+          color: #fc3565;
+          transition: color 1s ease;
+
+          &:after {
+            width: 100%;
+            background: #fc3565;
+          }
         }
-      }
 
-      &:before {
-        content: '';
-        display: block;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 18px;
-        height: 4px;
-        opacity: 0;
-        background-color: #222;
-        transform: translateX(100px);
-        transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+        &:focus {
+          &:after {
+            width: 100%;
+            background: #fc3565;
+          }
+        }
+
+        &:after {
+          content: '';
+          height: 5px;
+          left: 0;
+          bottom: 10px;
+          width: 1px;
+          position: absolute;
+          transition: width 1s ease, background-color 1s ease;
+          right: 0;
+          margin: 0 auto;
+        }
       }
     }
   }
@@ -118,7 +127,7 @@ const InnerContainer = styled.div`
     left: -53%;
     top: -25%;
     height: 65%;
-    background-color: #fff;
+    background-color: #333;
 
     &.middle {
       top: 29%;
@@ -140,7 +149,7 @@ const InnerContainer = styled.div`
 `;
 
 const CloseTrigger = styled.div`
-  position: absolute;
+  position: fixed;
   top: 32px;
   right: 32px;
   display: block;
@@ -161,7 +170,7 @@ const CloseTrigger = styled.div`
     display: block;
     width: 100%;
     height: 4px;
-    background-color: #222;
+    background-color: #fff;
     position: relative;
 
     &:before {
@@ -172,7 +181,7 @@ const CloseTrigger = styled.div`
       display: block;
       width: 0%;
       height: 100%;
-      background-color: rgba(255, 255, 255, 0.2);
+      background-color: #fc3565;
       transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
     }
 

@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+const SectionHome = styled.section`
+  overflow: hidden;
+`;
+
 const StyledCanvas = styled.canvas`
   position: absolute;
   top: 0;
@@ -102,4 +106,4 @@ const BtnProject = styled(Button)`
   }
 `;
 
-export { StyledCanvas, Flex, Text, Wrapper, Button, BtnProject };
+export { SectionHome, StyledCanvas, Flex, Text, Wrapper, Button, BtnProject };

@@ -19,7 +19,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     padding: 0;
     margin: 0;
-    overflow: hidden;
+    overflow-x: hidden;
     font-size: 1.6rem;
     font-family: 'Varela Round';
     line-height: 2;

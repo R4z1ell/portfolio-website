@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import { NavMenu, InnerContainer, CloseTrigger } from './style';
 
 import { TimelineMax } from 'gsap';
-import anime from 'animejs';
 
 const Navigation = props => {
   const [tlOpen] = useState(new TimelineMax({ paused: true }));
@@ -35,10 +34,7 @@ const Navigation = props => {
           delay: 0.1,
           ease: Power4.easeIn,
           onComplete: function() {
-            anime({
-              targets: closeTrigger.current,
-              zIndex: '25'
-            });
+            closeTrigger.current.style.zIndex = '25';
           }
         },
         'preOpen'
@@ -145,10 +141,7 @@ const Navigation = props => {
           backgroundColor: '#04C2C9',
           ease: Power4.easeInOut,
           onComplete: function() {
-            anime({
-              targets: closeTrigger.current,
-              zIndex: '5'
-            });
+            closeTrigger.current.style.zIndex = '5';
             openTrigger.current.style.visibility = 'visible';
           }
         },
@@ -212,18 +205,9 @@ const Navigation = props => {
           y: '23%',
           ease: Power4.easeInOut,
           onComplete: function() {
-            anime({
-              targets: menuTop.current,
-              backgroundColor: '#fff'
-            });
-            anime({
-              targets: menuMiddle.current,
-              backgroundColor: '#fff'
-            });
-            anime({
-              targets: menuBottom.current,
-              backgroundColor: '#fff'
-            });
+            menuTop.current.style.backgroundColor = '#333';
+            menuMiddle.current.style.backgroundColor = '#333';
+            menuBottom.current.style.backgroundColor = '#333';
           }
         },
         'close',
@@ -328,16 +312,24 @@ const Navigation = props => {
         <div ref={menuContainer} className="menu-container">
           <ul ref={menu} className="menu">
             <li>
-              <a href="#">Home</a>
+              <a href="#" className="text-underline">
+                Home
+              </a>
             </li>
             <li>
-              <a href="#">About</a>
+              <a href="#" className="text-underline">
+                About
+              </a>
             </li>
             <li>
-              <a href="#">Projects</a>
+              <a href="#" className="text-underline">
+                Projects
+              </a>
             </li>
             <li>
-              <a href="#">Contact</a>
+              <a href="#" className="text-underline">
+                Contact
+              </a>
             </li>
           </ul>
         </div>
