@@ -138,7 +138,7 @@ const Navigation = props => {
         menuTop.current,
         0.2,
         {
-          backgroundColor: '#04C2C9',
+          backgroundColor: '#49738d',
           ease: Power4.easeInOut,
           onComplete: function() {
             closeTrigger.current.style.zIndex = '5';
@@ -151,7 +151,7 @@ const Navigation = props => {
         menuMiddle.current,
         0.2,
         {
-          backgroundColor: '#04C2C9',
+          backgroundColor: '#49738d',
           ease: Power4.easeInOut
         },
         'close'
@@ -160,7 +160,7 @@ const Navigation = props => {
         menuBottom.current,
         0.2,
         {
-          backgroundColor: '#04C2C9',
+          backgroundColor: '#49738d',
           ease: Power4.easeInOut
         },
         'close'
@@ -205,9 +205,9 @@ const Navigation = props => {
           y: '23%',
           ease: Power4.easeInOut,
           onComplete: function() {
-            menuTop.current.style.backgroundColor = '#333';
-            menuMiddle.current.style.backgroundColor = '#333';
-            menuBottom.current.style.backgroundColor = '#333';
+            menuTop.current.style.backgroundColor = '#49738d';
+            menuMiddle.current.style.backgroundColor = '#49738d';
+            menuBottom.current.style.backgroundColor = '#49738d';
           }
         },
         'close',

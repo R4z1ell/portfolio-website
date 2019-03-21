@@ -127,7 +127,7 @@ const InnerContainer = styled.div`
     left: -53%;
     top: -25%;
     height: 65%;
-    background-color: #333;
+    background-color: #49738d;
 
     &.middle {
       top: 29%;
@@ -142,8 +142,8 @@ const InnerContainer = styled.div`
     }
     &.bottom {
       top: 135%;
-      transform: rotate(-45deg) translateY(25%);
       left: -20%;
+      transform: rotate(-45deg) translateY(25%);
     }
   }
 `;
