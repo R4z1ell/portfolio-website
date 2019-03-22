@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 const NavMenu = styled.div`
   position: absolute;
-  top: 32px;
-  right: 20px;
+  top: 35px;
+  right: 35px;
   display: block;
   width: 42px;
   height: 42px;
@@ -150,8 +150,8 @@ const InnerContainer = styled.div`
 
 const CloseTrigger = styled.div`
   position: fixed;
-  top: 32px;
-  right: 32px;
+  top: 35px;
+  right: 35px;
   display: block;
   width: 42px;
   height: 42px;

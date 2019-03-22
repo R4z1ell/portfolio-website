@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 const SkillsContainer = styled.div`
-  width: 43%;
-  margin-left: 43px;
+  width: 92%;
   background-color: #313440;
   border-radius: 5px 0 5px 5px;
   box-shadow: 0 10px 6px -6px #000;

@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Background, Wrapper, Flex } from './style';
 import Skills from '../Skills';
+import SkillCard from '../SkillCard';
 
 const About = () => {
   return (
@@ -21,7 +22,17 @@ const About = () => {
                 code i knew that this was my path.
               </p>
             </div>
-            <Skills />
+            <div className="skills-wrapper">
+              <Skills />
+              <SkillCard svgPath={'../../../static/html.svg'} cssClass="html" />
+              <SkillCard svgPath={'../../../static/css.svg'} cssClass="css" />
+              <SkillCard svgPath={'../../../static/js.svg'} cssClass="js" />
+              <SkillCard
+                svgPath={'../../../static/react.svg'}
+                cssClass="react"
+              />
+              <SkillCard svgPath={'../../../static/node.svg'} cssClass="node" />
+            </div>
           </Flex>
         </Wrapper>
       </Background>

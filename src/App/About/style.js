@@ -25,13 +25,17 @@ const Flex = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: start;
+  align-items: center;
   margin-top: 130px;
 
   .about-wrapper {
     width: 40%;
     margin-left: 43px;
     text-align: center;
+  }
+
+  .skills-wrapper {
+    width: 43%;
   }
 
   p {
