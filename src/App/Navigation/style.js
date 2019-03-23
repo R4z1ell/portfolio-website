@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const NavMenu = styled.div`
-  position: absolute;
+  position: fixed;
   top: 35px;
   right: 35px;
   display: block;
@@ -57,6 +57,7 @@ const NavMenu = styled.div`
 
 const InnerContainer = styled.div`
   position: fixed;
+  display: none;
   height: 100vh;
   width: 100%;
   left: 0;

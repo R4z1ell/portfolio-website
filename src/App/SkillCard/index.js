@@ -5,7 +5,7 @@ import { CardWrapper } from './style';
 
 const SkillCard = props => {
   return (
-    <CardWrapper>
+    <CardWrapper level={props.level} skillName={props.skillName}>
       <ul>
         <li />
         <li />

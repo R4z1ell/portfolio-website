@@ -7,20 +7,22 @@ const Navigation = props => {
   const [tlOpen] = useState(new TimelineMax({ paused: true }));
   const [tlClose] = useState(new TimelineMax({ paused: true }));
 
-  var openTrigger = useRef(null);
-  var openTriggerTop = useRef(null);
-  var openTriggerMiddle = useRef(null);
-  var openTriggerBottom = useRef(null);
+  let innerContainer = useRef(null);
 
-  var closeTrigger = useRef(null);
-  var closeTriggerLeft = useRef(null);
-  var closeTriggerRight = useRef(null);
+  let openTrigger = useRef(null);
+  let openTriggerTop = useRef(null);
+  let openTriggerMiddle = useRef(null);
+  let openTriggerBottom = useRef(null);
 
-  var menuContainer = useRef(null);
-  var menu = useRef(null);
-  var menuTop = useRef(null);
-  var menuMiddle = useRef(null);
-  var menuBottom = useRef(null);
+  let closeTrigger = useRef(null);
+  let closeTriggerLeft = useRef(null);
+  let closeTriggerRight = useRef(null);
+
+  let menuContainer = useRef(null);
+  let menu = useRef(null);
+  let menuTop = useRef(null);
+  let menuMiddle = useRef(null);
+  let menuBottom = useRef(null);
 
   useEffect(() => {
     tlOpen
@@ -274,7 +276,9 @@ const Navigation = props => {
     } else {
       tlOpen.restart();
     }
-    props.navStatus('open');
+
+    innerContainer.current.style.display = 'block';
+    innerContainer.current.style.zIndex = '20';
   };
 
   const CloseNavMenuClickHandler = () => {
@@ -283,7 +287,10 @@ const Navigation = props => {
     } else {
       tlClose.restart();
     }
-    props.navStatus('close');
+
+    setTimeout(() => {
+      innerContainer.current.style.zIndex = 'auto';
+    }, 500);
   };
 
   return (
@@ -305,7 +312,7 @@ const Navigation = props => {
         <span ref={closeTriggerLeft} className="close-trigger-bar left" />
         <span ref={closeTriggerRight} className="close-trigger-bar right" />
       </CloseTrigger>
-      <InnerContainer className="inner-container">
+      <InnerContainer ref={innerContainer} className="inner-container">
         <span ref={menuTop} className="menu-bg top" />
         <span ref={menuMiddle} className="menu-bg middle" />
         <span ref={menuBottom} className="menu-bg bottom" />

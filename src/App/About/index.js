@@ -24,14 +24,36 @@ const About = () => {
             </div>
             <div className="skills-wrapper">
               <Skills />
-              <SkillCard svgPath={'../../../static/html.svg'} cssClass="html" />
-              <SkillCard svgPath={'../../../static/css.svg'} cssClass="css" />
-              <SkillCard svgPath={'../../../static/js.svg'} cssClass="js" />
+              <SkillCard
+                svgPath={'../../../static/html.svg'}
+                cssClass="html"
+                level={9}
+                skillName={'html'}
+              />
+              <SkillCard
+                svgPath={'../../../static/css.svg'}
+                cssClass="css"
+                level={9}
+                skillName={'css'}
+              />
+              <SkillCard
+                svgPath={'../../../static/js.svg'}
+                cssClass="js"
+                level={8}
+                skillName={'js'}
+              />
               <SkillCard
                 svgPath={'../../../static/react.svg'}
                 cssClass="react"
+                level={8}
+                skillName={'react'}
               />
-              <SkillCard svgPath={'../../../static/node.svg'} cssClass="node" />
+              <SkillCard
+                svgPath={'../../../static/node.svg'}
+                cssClass="node"
+                level={8}
+                skillName={'node'}
+              />
             </div>
           </Flex>
         </Wrapper>
