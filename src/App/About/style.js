@@ -8,7 +8,7 @@ const Background = styled.div`
 `;
 
 const Wrapper = styled.div`
-  padding: 130px 130px 300px 130px;
+  padding: 130px 130px 200px 130px;
 
   h1 {
     font-size: 48px;
