@@ -3,13 +3,14 @@ import React from 'react';
 import { Background, Wrapper, Flex } from './style';
 import Skills from '../Skills';
 import SkillCard from '../SkillCard';
+import { Title } from '../../shared/Title';
 
 const About = () => {
   return (
     <section id="about">
       <Background>
         <Wrapper>
-          <h1>about</h1>
+          <Title width="175px">about</Title>
           <Flex>
             <div className="about-wrapper">
               <img src="/static/portrait.png" alt="portrait" />

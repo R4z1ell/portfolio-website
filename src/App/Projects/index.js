@@ -1,14 +1,16 @@
 import React from 'react';
 
 import { Background, Wrapper } from './style';
+
 import ProjectCard from '../ProjectCard';
+import { Title } from '../../shared/Title';
 
 const Projects = () => {
   return (
     <section id="projects">
       <Background>
         <Wrapper>
-          <h1>projects</h1>
+          <Title width="249px">projects</Title>
           <div className="cards-container">
             <ProjectCard
               color="jetdeals"

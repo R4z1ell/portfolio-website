@@ -8,17 +8,7 @@ const Background = styled.div`
 `;
 
 const Wrapper = styled.div`
-  padding: 130px 375px 250px 375px;
-
-  h1 {
-    font-size: 48px;
-    color: #fff;
-    text-transform: uppercase;
-    border: 4px double #fff;
-    margin: 0 auto;
-    border-width: 4px 0;
-    width: 249px;
-  }
+  padding: 130px 375px 281px 375px;
 
   .cards-container {
     display: flex;
