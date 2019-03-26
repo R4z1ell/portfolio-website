@@ -44,25 +44,6 @@ const Wrapper = styled.div`
     &:nth-child(3) {
       margin-bottom: 0px;
     }
-
-    /* label {
-      &:before,
-      &:after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 1px;
-      }
-
-      &:after {
-        margin-top: 2px;
-        border-bottom: 2px solid #04c2c9;
-        transform: translate3d(-100%, 0, 0);
-        transition: transform 0.5s;
-      }
-    } */
   }
 
   textarea {

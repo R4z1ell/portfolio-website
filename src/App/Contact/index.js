@@ -10,7 +10,7 @@ const Contact = () => {
     <section id="contact">
       <Background>
         <Wrapper>
-          <Title width="235px">contact</Title>
+          <Title width="225px">contact</Title>
           <Highlight>Have a question? I'd love to hear from you.</Highlight>
           <form autoComplete="off" onSubmit={submitHandler}>
             <ul>

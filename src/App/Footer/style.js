@@ -31,6 +31,7 @@ const Social = styled.div`
   width: 40px;
   background-color: #fc3565;
   transform: rotate(45deg);
+  cursor: pointer;
 
   svg {
     fill: #fff;

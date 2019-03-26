@@ -1,18 +1,18 @@
 import styled from 'styled-components';
 
-let colors = {
+const colors = {
   jetdeals: '#1572b6',
   cinema: '#4FC08D',
   sensation: '#CFA670'
 };
 
-let shadows = {
+const shadows = {
   jetdeals: '#144f7a',
   cinema: '#388060',
   sensation: '#89704D'
 };
 
-let margins = {
+const margins = {
   jetdeals: '20px',
   cinema: '17px',
   sensation: '31px'

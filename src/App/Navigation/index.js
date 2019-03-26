@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { TimelineMax } from 'gsap';
+import { scroller } from 'react-scroll';
+
 import { NavMenu, InnerContainer, CloseTrigger } from './style';
 
-import { TimelineMax } from 'gsap';
-
-const Navigation = props => {
+const Navigation = () => {
   const [tlOpen] = useState(new TimelineMax({ paused: true }));
   const [tlClose] = useState(new TimelineMax({ paused: true }));
 
@@ -293,6 +294,15 @@ const Navigation = props => {
     }, 500);
   };
 
+  const scrollToElement = element => {
+    CloseNavMenuClickHandler();
+    scroller.scrollTo(element, {
+      duration: 1500,
+      delay: 100,
+      smooth: true
+    });
+  };
+
   return (
     <React.Fragment>
       <NavMenu
@@ -319,24 +329,36 @@ const Navigation = props => {
         <div ref={menuContainer} className="menu-container">
           <ul ref={menu} className="menu">
             <li>
-              <a href="#" className="text-underline">
+              <span
+                className="text-underline"
+                onClick={() => scrollToElement('Home')}
+              >
                 Home
-              </a>
+              </span>
             </li>
             <li>
-              <a href="#" className="text-underline">
+              <span
+                className="text-underline"
+                onClick={() => scrollToElement('About')}
+              >
                 About
-              </a>
+              </span>
             </li>
             <li>
-              <a href="#" className="text-underline">
+              <span
+                className="text-underline"
+                onClick={() => scrollToElement('Projects')}
+              >
                 Projects
-              </a>
+              </span>
             </li>
             <li>
-              <a href="#" className="text-underline">
+              <span
+                className="text-underline"
+                onClick={() => scrollToElement('Contact')}
+              >
                 Contact
-              </a>
+              </span>
             </li>
           </ul>
         </div>

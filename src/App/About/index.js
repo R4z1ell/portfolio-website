@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import { Waypoint } from 'react-waypoint';
+import Fade from 'react-reveal/Fade';
+import Slide from 'react-reveal/Slide';
 
 import { Background, Wrapper, Flex } from './style';
 import Skills from '../Skills';
@@ -6,56 +9,74 @@ import SkillCard from '../SkillCard';
 import { Title } from '../../shared/Title';
 
 const About = () => {
+  let openTrigger = useRef(null);
+
+  const handleWaypointEnter = ({ previousPosition }) => {
+    if (previousPosition === Waypoint.below) {
+      console.log('waypoint');
+    }
+  };
+
   return (
     <section id="about">
       <Background>
         <Wrapper>
-          <Title width="175px">about</Title>
+          {/* <Waypoint onEnter={handleWaypointEnter} bottomOffset="30%"> */}
+          <Fade ssrReveal={true}>
+            <Title ref={openTrigger} width="175px">
+              about
+            </Title>
+          </Fade>
+          {/* </Waypoint> */}
           <Flex>
-            <div className="about-wrapper">
-              <img src="/static/portrait.png" alt="portrait" />
-              <p>
-                Hello to you visitor and welcome to my personal site! Throught
-                my whole life i've always been driven towards the discovery of
-                new things with an innate and endless passion for everything
-                that involves technology. Ultimately my eager brought me in the
-                world of Software Development and since my very first line of
-                code i knew that this was my path.
-              </p>
-            </div>
-            <div className="skills-wrapper">
-              <Skills />
-              <SkillCard
-                svgPath={'../../../static/html.svg'}
-                cssClass="html"
-                level={9}
-                skillName={'html'}
-              />
-              <SkillCard
-                svgPath={'../../../static/css.svg'}
-                cssClass="css"
-                level={9}
-                skillName={'css'}
-              />
-              <SkillCard
-                svgPath={'../../../static/js.svg'}
-                cssClass="js"
-                level={8}
-                skillName={'js'}
-              />
-              <SkillCard
-                svgPath={'../../../static/react.svg'}
-                cssClass="react"
-                level={8}
-                skillName={'react'}
-              />
-              <SkillCard
-                svgPath={'../../../static/node.svg'}
-                cssClass="node"
-                level={8}
-                skillName={'node'}
-              />
-            </div>
+            <Slide left ssrReveal={true}>
+              <div className="about-wrapper">
+                <img src="/static/portrait.png" alt="portrait" />
+                <p>
+                  Hello to you visitor and welcome to my personal site! Throught
+                  my whole life i've always been driven towards the discovery of
+                  new things with an innate and endless passion for everything
+                  that involves technology. Ultimately my eager brought me in
+                  the world of Software Development and since my very first line
+                  of code i knew that this was my path.
+                </p>
+              </div>
+            </Slide>
+            <Slide right ssrReveal={true}>
+              <div className="skills-wrapper">
+                <Skills />
+                <SkillCard
+                  svgPath={'../../../static/html.svg'}
+                  cssClass="html"
+                  level={9}
+                  skillName={'html'}
+                />
+                <SkillCard
+                  svgPath={'../../../static/css.svg'}
+                  cssClass="css"
+                  level={9}
+                  skillName={'css'}
+                />
+                <SkillCard
+                  svgPath={'../../../static/js.svg'}
+                  cssClass="js"
+                  level={8}
+                  skillName={'js'}
+                />
+                <SkillCard
+                  svgPath={'../../../static/react.svg'}
+                  cssClass="react"
+                  level={8}
+                  skillName={'react'}
+                />
+                <SkillCard
+                  svgPath={'../../../static/node.svg'}
+                  cssClass="node"
+                  level={8}
+                  skillName={'node'}
+                />
+              </div>
+            </Slide>
           </Flex>
         </Wrapper>
       </Background>

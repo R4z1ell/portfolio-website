@@ -82,6 +82,10 @@ const InnerContainer = styled.div`
       font-size: 50px;
       text-transform: uppercase;
 
+      span {
+        cursor: pointer;
+      }
+
       .text-underline {
         text-decoration: none;
         color: #fff;
