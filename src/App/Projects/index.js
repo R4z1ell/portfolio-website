@@ -1,4 +1,5 @@
 import React from 'react';
+import Bounce from 'react-reveal/Bounce';
 
 import { Background, Wrapper } from './style';
 
@@ -12,30 +13,36 @@ const Projects = () => {
         <Wrapper>
           <Title width="249px">projects</Title>
           <div className="cards-container">
-            <ProjectCard
-              color="jetdeals"
-              title="JetDeals"
-              skillOne="react"
-              skillTwo="node.js"
-              skillThree="mongodb"
-              image="/static/jetdeals.png"
-            />
-            <ProjectCard
-              color="cinema"
-              title="Nuxt-Cinema"
-              skillOne="nuxt.js"
-              skillTwo="sass"
-              skillThree="api"
-              image="/static/nuxt-cinema.png"
-            />
-            <ProjectCard
-              color="sensation"
-              title="Sensation"
-              skillOne="html5"
-              skillTwo="css3"
-              skillThree="sass"
-              image="/static/sensation.png"
-            />
+            <Bounce left ssrReveal={true}>
+              <ProjectCard
+                color="jetdeals"
+                title="JetDeals"
+                skillOne="react"
+                skillTwo="node.js"
+                skillThree="mongodb"
+                image="/static/jetdeals.png"
+              />
+            </Bounce>
+            <Bounce bottom ssrReveal={true}>
+              <ProjectCard
+                color="cinema"
+                title="Nuxt-Cinema"
+                skillOne="nuxt.js"
+                skillTwo="sass"
+                skillThree="api"
+                image="/static/nuxt-cinema.png"
+              />
+            </Bounce>
+            <Bounce right ssrReveal={true}>
+              <ProjectCard
+                color="sensation"
+                title="Sensation"
+                skillOne="html5"
+                skillTwo="css3"
+                skillThree="sass"
+                image="/static/sensation.png"
+              />
+            </Bounce>
           </div>
         </Wrapper>
       </Background>

@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
-import Navigation from '../Navigation';
-
 import start from '../../../utils/starfield';
+
 import GlobalStyle from '../../shared/GlobalStyle';
+import Navigation from '../Navigation';
 
 import {
   SectionHome,

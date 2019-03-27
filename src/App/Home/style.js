@@ -1,4 +1,7 @@
 import styled from 'styled-components';
+import Zoom from 'react-reveal/Zoom';
+import Fade from 'react-reveal/Fade';
+import withReveal from 'react-reveal/withReveal';
 
 const SectionHome = styled.section`
   overflow: hidden;
@@ -20,24 +23,30 @@ const Flex = styled.div`
   height: 100vh;
 `;
 
-const Text = styled.div`
-  font-size: 4.2rem;
-  line-height: 5.4rem;
-  text-align: center;
-  pointer-events: none;
-  margin-bottom: 15px;
-  color: #fff;
-  z-index: 1;
+const Text = withReveal(
+  styled.div`
+    font-size: 4.2rem;
+    line-height: 5.4rem;
+    text-align: center;
+    pointer-events: none;
+    margin-bottom: 15px;
+    color: #fff;
+    z-index: 1;
 
-  span {
-    color: #fc3565;
-    margin-left: 10px;
-  }
-`;
+    span {
+      color: #fc3565;
+      margin-left: 10px;
+    }
+  `,
+  <Zoom cascade ssrReveal={true} />
+);
 
-const Wrapper = styled.div`
-  display: flex;
-`;
+const Wrapper = withReveal(
+  styled.div`
+    display: flex;
+  `,
+  <Fade bottom ssrReveal={true} />
+);
 
 const Button = styled.button`
   background: transparent;

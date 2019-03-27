@@ -1,6 +1,4 @@
 import React, { useRef } from 'react';
-import { Waypoint } from 'react-waypoint';
-import Fade from 'react-reveal/Fade';
 import Slide from 'react-reveal/Slide';
 
 import { Background, Wrapper, Flex } from './style';
@@ -21,13 +19,9 @@ const About = () => {
     <section id="about">
       <Background>
         <Wrapper>
-          {/* <Waypoint onEnter={handleWaypointEnter} bottomOffset="30%"> */}
-          <Fade ssrReveal={true}>
-            <Title ref={openTrigger} width="175px">
-              about
-            </Title>
-          </Fade>
-          {/* </Waypoint> */}
+          <Title ref={openTrigger} width="175px">
+            about
+          </Title>
           <Flex>
             <Slide left ssrReveal={true}>
               <div className="about-wrapper">

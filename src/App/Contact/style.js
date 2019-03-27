@@ -1,4 +1,6 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+import Slide from 'react-reveal/Slide';
+import withReveal from 'react-reveal/withReveal';
 
 const Background = styled.div`
   background-color: #333;
@@ -8,11 +10,6 @@ const Background = styled.div`
 const Wrapper = styled.div`
   padding: 130px 130px 157px 130px;
   font-family: 'Ubuntu';
-
-  form {
-    width: 666px;
-    margin: 0 auto;
-  }
 
   input[type='text'],
   input[type='email'] {
@@ -86,15 +83,18 @@ const Label = styled.label`
   }
 `;
 
-const Highlight = styled.div`
-  font-family: 'Ubuntu';
-  font-weight: 700;
-  font-size: 23px;
-  color: #04c2c9;
-  text-align: center;
-  margin-top: 120px;
-  margin-bottom: 40px;
-`;
+const Highlight = withReveal(
+  styled.div`
+    font-family: 'Ubuntu';
+    font-weight: 700;
+    font-size: 23px;
+    color: #04c2c9;
+    text-align: center;
+    margin-top: 120px;
+    margin-bottom: 40px;
+  `,
+  <Slide top ssrReveal={true} />
+);
 
 const Button = styled.button`
   background: #fc3565;
@@ -117,4 +117,9 @@ const Button = styled.button`
   }
 `;
 
-export { Background, Wrapper, Highlight, Button, Label };
+const Form = styled.form`
+  width: 666px;
+  margin: 0 auto;
+`;
+
+export { Background, Wrapper, Highlight, Button, Label, Form };
