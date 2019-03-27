@@ -7,21 +7,11 @@ import SkillCard from '../SkillCard';
 import { Title } from '../../shared/Title';
 
 const About = () => {
-  let openTrigger = useRef(null);
-
-  const handleWaypointEnter = ({ previousPosition }) => {
-    if (previousPosition === Waypoint.below) {
-      console.log('waypoint');
-    }
-  };
-
   return (
     <section id="about">
       <Background>
         <Wrapper>
-          <Title ref={openTrigger} width="175px">
-            about
-          </Title>
+          <Title width="175px">about</Title>
           <Flex>
             <Slide left ssrReveal={true}>
               <div className="about-wrapper">

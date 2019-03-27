@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import Zoom from 'react-reveal/Zoom';
 import Fade from 'react-reveal/Fade';
 import withReveal from 'react-reveal/withReveal';
+import { device } from '../../shared/MediaQueries';
 
 const SectionHome = styled.section`
   overflow: hidden;
@@ -25,13 +26,33 @@ const Flex = styled.div`
 
 const Text = withReveal(
   styled.div`
-    font-size: 4.2rem;
-    line-height: 5.4rem;
+    font-size: 42px;
+    line-height: 54px;
     text-align: center;
     pointer-events: none;
     margin-bottom: 15px;
     color: #fff;
     z-index: 1;
+
+    @media ${device.desktop} {
+      font-size: 36px;
+      line-height: 44px;
+    }
+
+    @media ${device.tablet} {
+      font-size: 32px;
+      line-height: 41px;
+    }
+
+    @media ${device.tabletM} {
+      font-size: 28px;
+      line-height: 38px;
+    }
+
+    @media ${device.tabletS} {
+      font-size: 24px;
+      line-height: 31px;
+    }
 
     span {
       color: #fc3565;
@@ -59,6 +80,18 @@ const Button = styled.button`
   z-index: 1;
   transition: all 0.5s;
   position: relative;
+
+  @media ${device.desktop} {
+    padding: 15px 30px;
+  }
+
+  @media ${device.tablet} {
+    padding: 15px 28px;
+  }
+
+  @media ${device.tablets} {
+    font-size: 14px;
+  }
 
   &:hover {
     background: #04c2c9;
