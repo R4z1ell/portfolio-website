@@ -5,7 +5,11 @@ import { CardWrapper, Flex, Button } from './style';
 
 const ProjectCard = props => {
   return (
-    <CardWrapper color={props.color} image={props.image}>
+    <CardWrapper
+      color={props.color}
+      image={props.image}
+      marginRight={props.marginRight}
+    >
       <Flex color={props.color} margin={props.color}>
         <h3>{props.title}</h3>
         <div className="tech-wrapper">

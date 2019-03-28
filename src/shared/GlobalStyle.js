@@ -23,6 +23,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1.6rem;
     font-family: 'Varela Round';
     line-height: 2;
+    width: 100vw;
     -webkit-font-smoothing: antialiased;
   }
 

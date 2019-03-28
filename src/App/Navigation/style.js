@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from '../../shared/MediaQueries';
 
 const NavMenu = styled.div`
   position: fixed;
@@ -9,6 +10,26 @@ const NavMenu = styled.div`
   height: 42px;
   cursor: pointer;
   z-index: 333;
+
+  @media ${device.desktopS} {
+    top: 30px;
+    right: 25px;
+  }
+
+  @media ${device.phone} {
+    top: 25px;
+    right: 20px;
+  }
+
+  @media ${device.mobileM} {
+    top: 23px;
+    right: 15px;
+  }
+
+  @media ${device.mobileS} {
+    top: 20px;
+    right: 11px;
+  }
 
   &:hover {
     .menu-trigger-bar {

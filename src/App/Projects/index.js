@@ -21,6 +21,7 @@ const Projects = () => {
                 skillTwo="node.js"
                 skillThree="mongodb"
                 image="/static/jetdeals.png"
+                marginRight="60px"
               />
             </Bounce>
             <Bounce bottom ssrReveal={true}>
@@ -31,6 +32,7 @@ const Projects = () => {
                 skillTwo="sass"
                 skillThree="api"
                 image="/static/nuxt-cinema.png"
+                marginRight="60px"
               />
             </Bounce>
             <Bounce right ssrReveal={true}>

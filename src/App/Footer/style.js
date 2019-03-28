@@ -17,6 +17,7 @@ const Copyright = styled.div`
   font-family: 'Varela Round';
   font-size: 15px;
   color: #fff;
+  white-space: nowrap;
 
   span {
     color: #fc3565;

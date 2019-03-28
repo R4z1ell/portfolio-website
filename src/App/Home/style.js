@@ -34,7 +34,7 @@ const Text = withReveal(
     color: #fff;
     z-index: 1;
 
-    @media ${device.desktop} {
+    @media ${device.desktopS} {
       font-size: 36px;
       line-height: 44px;
     }
@@ -52,6 +52,11 @@ const Text = withReveal(
     @media ${device.tabletS} {
       font-size: 24px;
       line-height: 31px;
+      margin: 0 3% 15px 3%;
+    }
+
+    @media ${device.mobileM} {
+      margin: 0 1% 15px 1%;
     }
 
     span {
@@ -65,6 +70,10 @@ const Text = withReveal(
 const Wrapper = withReveal(
   styled.div`
     display: flex;
+
+    @media ${device.mobileS} {
+      display: block;
+    }
   `,
   <Fade bottom ssrReveal={true} />
 );
@@ -81,7 +90,7 @@ const Button = styled.button`
   transition: all 0.5s;
   position: relative;
 
-  @media ${device.desktop} {
+  @media ${device.desktopS} {
     padding: 15px 30px;
   }
 
@@ -89,8 +98,12 @@ const Button = styled.button`
     padding: 15px 28px;
   }
 
-  @media ${device.tablets} {
-    font-size: 14px;
+  @media ${device.tabletS} {
+    font-size: 15px;
+  }
+
+  @media ${device.mobileS} {
+    padding: 13px 24px;
   }
 
   &:hover {
@@ -103,6 +116,15 @@ const BtnProject = styled(Button)`
   background: #fc3565;
   border: none;
   margin-right: 20px;
+
+  @media ${device.tabletS} {
+    margin-right: 15px;
+  }
+
+  @media ${device.mobileS} {
+    padding: 15px 24px;
+    margin-right: 10px;
+  }
 
   &:hover {
     background: transparent;

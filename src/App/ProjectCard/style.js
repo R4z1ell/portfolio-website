@@ -25,6 +25,7 @@ const CardWrapper = styled.div`
   border-radius: 6px;
   background-color: #141414;
   border: 2px solid ${props => colors[props.color]};
+  margin-right: ${props => props.marginRight};
 
   .image {
     width: 100%;
