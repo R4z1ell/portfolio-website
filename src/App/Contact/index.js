@@ -12,7 +12,7 @@ const Contact = () => {
     <section id="contact">
       <Background>
         <Wrapper>
-          <Title width="225px">contact</Title>
+          <Title>contact</Title>
           <Highlight>Have a question? I'd love to hear from you.</Highlight>
           <LightSpeed left ssrReveal={true}>
             <Form autoComplete="off" onSubmit={submitHandler}>

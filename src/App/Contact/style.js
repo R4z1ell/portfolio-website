@@ -1,14 +1,15 @@
 import styled, { keyframes } from 'styled-components';
 import Slide from 'react-reveal/Slide';
 import withReveal from 'react-reveal/withReveal';
+import { device } from '../../shared/MediaQueries';
 
 const Background = styled.div`
-  background-color: #333;
+  height: calc(100vh - 111px);
   background-image: url('/static/Endless-Constellation.svg');
 `;
 
 const Wrapper = styled.div`
-  padding: 130px 130px 157px 130px;
+  padding: 130px 0px 157px 0px;
   font-family: 'Ubuntu';
 
   input[type='text'],
@@ -21,6 +22,10 @@ const Wrapper = styled.div`
     color: #fff;
     padding: 0 20px;
     width: 100%;
+
+    @media ${device.tabletS} {
+      font-size: 18px;
+    }
 
     &:focus {
       outline: none;
@@ -53,6 +58,10 @@ const Wrapper = styled.div`
     padding: 15px 20px;
     min-height: 160px;
     resize: vertical;
+
+    @media ${device.tabletS} {
+      font-size: 18px;
+    }
 
     &:focus {
       outline: none;
@@ -92,6 +101,18 @@ const Highlight = withReveal(
     text-align: center;
     margin-top: 120px;
     margin-bottom: 40px;
+
+    @media ${device.tablet} {
+      font-size: 20px;
+    }
+
+    @media ${device.tabletM} {
+      font-size: 18px;
+    }
+
+    @media ${device.tabletS} {
+      font-size: 16px;
+    }
   `,
   <Slide top ssrReveal={true} />
 );
@@ -108,6 +129,10 @@ const Button = styled.button`
   transition: 0.2s;
   cursor: pointer;
 
+  @media ${device.tabletS} {
+    font-size: 20px;
+  }
+
   &:active {
     transform: scale(0.95);
   }
@@ -120,6 +145,10 @@ const Button = styled.button`
 const Form = styled.form`
   width: 666px;
   margin: 0 auto;
+
+  @media ${device.tablet} {
+    width: 80%;
+  }
 `;
 
 export { Background, Wrapper, Highlight, Button, Label, Form };

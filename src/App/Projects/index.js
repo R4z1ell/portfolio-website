@@ -11,7 +11,7 @@ const Projects = () => {
     <section id="projects">
       <Background>
         <Wrapper>
-          <Title width="249px">projects</Title>
+          <Title>projects</Title>
           <div className="cards-container">
             <Bounce left ssrReveal={true}>
               <ProjectCard

@@ -1,7 +1,7 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import Slide from 'react-reveal/Slide';
 
-import { Background, Wrapper, Flex } from './style';
+import { Background, Wrapper, Flex, CardsWrapper } from './style';
 import Skills from '../Skills';
 import SkillCard from '../SkillCard';
 import { Title } from '../../shared/Title';
@@ -11,7 +11,7 @@ const About = () => {
     <section id="about">
       <Background>
         <Wrapper>
-          <Title width="175px">about</Title>
+          <Title>about</Title>
           <Flex>
             <Slide left ssrReveal={true}>
               <div className="about-wrapper">
@@ -29,36 +29,38 @@ const About = () => {
             <Slide right ssrReveal={true}>
               <div className="skills-wrapper">
                 <Skills />
-                <SkillCard
-                  svgPath={'../../../static/html.svg'}
-                  cssClass="html"
-                  level={9}
-                  skillName={'html'}
-                />
-                <SkillCard
-                  svgPath={'../../../static/css.svg'}
-                  cssClass="css"
-                  level={9}
-                  skillName={'css'}
-                />
-                <SkillCard
-                  svgPath={'../../../static/js.svg'}
-                  cssClass="js"
-                  level={8}
-                  skillName={'js'}
-                />
-                <SkillCard
-                  svgPath={'../../../static/react.svg'}
-                  cssClass="react"
-                  level={8}
-                  skillName={'react'}
-                />
-                <SkillCard
-                  svgPath={'../../../static/node.svg'}
-                  cssClass="node"
-                  level={8}
-                  skillName={'node'}
-                />
+                <CardsWrapper>
+                  <SkillCard
+                    svgPath={'../../../static/html.svg'}
+                    cssClass="html"
+                    level={9}
+                    skillName={'html'}
+                  />
+                  <SkillCard
+                    svgPath={'../../../static/css.svg'}
+                    cssClass="css"
+                    level={9}
+                    skillName={'css'}
+                  />
+                  <SkillCard
+                    svgPath={'../../../static/js.svg'}
+                    cssClass="js"
+                    level={8}
+                    skillName={'js'}
+                  />
+                  <SkillCard
+                    svgPath={'../../../static/react.svg'}
+                    cssClass="react"
+                    level={8}
+                    skillName={'react'}
+                  />
+                  <SkillCard
+                    svgPath={'../../../static/node.svg'}
+                    cssClass="node"
+                    level={8}
+                    skillName={'node'}
+                  />
+                </CardsWrapper>
               </div>
             </Slide>
           </Flex>

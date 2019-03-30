@@ -11,11 +11,14 @@ const Title = withReveal(
     border: 4px double #fff;
     margin: 0 auto;
     border-width: 4px 0;
-    width: ${props => props.width};
+    width: fit-content;
+
+    @media ${device.tablet} {
+      font-size: 40px;
+    }
 
     @media ${device.phone} {
       font-size: 36px;
-      width: fit-content;
     }
   `,
   <Slide right ssrReveal={true} />

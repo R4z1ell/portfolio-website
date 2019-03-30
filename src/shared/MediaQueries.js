@@ -1,4 +1,5 @@
 const sizes = {
+  desktopB: '1650px',
   desktopL: '1270px',
   desktopM: '1000px',
   desktopS: '940px',
@@ -12,6 +13,7 @@ const sizes = {
 };
 
 export const device = {
+  desktopB: `(max-width: ${sizes.desktopB})`,
   desktopL: `(max-width: ${sizes.desktopL})`,
   desktopM: `(max-width: ${sizes.desktopM})`,
   desktopS: `(max-width: ${sizes.desktopS})`,

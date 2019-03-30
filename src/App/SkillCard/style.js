@@ -9,9 +9,6 @@ let colors = {
 };
 
 const CardWrapper = styled.div`
-  float: left;
-  margin-top: 75px;
-  margin-right: 36px;
   width: 100px;
   cursor: pointer;
 
