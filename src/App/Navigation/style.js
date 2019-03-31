@@ -1,224 +1,204 @@
 import styled from 'styled-components';
 import { device } from '../../shared/MediaQueries';
 
-const NavMenu = styled.div`
+const Container = styled.div``;
+
+const NavBackground = styled.div`
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
   position: fixed;
-  top: 35px;
-  right: 35px;
-  display: block;
-  width: 42px;
-  height: 42px;
-  cursor: pointer;
-  z-index: 333;
+  top: 50px;
+  right: 52px;
+  background-image: linear-gradient(
+    to right top,
+    #051937,
+    #004d7a,
+    #008793,
+    #00bf72,
+    #a8eb12
+  );
+  z-index: 1000;
+  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
 
-  @media ${device.desktopS} {
-    top: 30px;
-    right: 25px;
+  @media ${device.tablet} {
+    height: 30px;
+    width: 30px;
+    top: 27px;
+    right: 27px;
   }
+`;
 
-  @media ${device.phone} {
-    top: 25px;
+const NavButton = styled.label`
+  background-color: #fff;
+  height: 55px;
+  width: 55px;
+  position: fixed;
+  top: 45px;
+  right: 45px;
+  border-radius: 50%;
+  z-index: 2000;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+
+  @media ${device.tablet} {
+    height: 40px;
+    width: 40px;
+    top: 20px;
     right: 20px;
   }
 
-  @media ${device.mobileM} {
-    top: 23px;
-    right: 15px;
-  }
+  &:hover ${NavIcon}:before {
+    top: -10px;
 
-  @media ${device.mobileS} {
-    top: 20px;
-    right: 11px;
-  }
-
-  &:hover {
-    .menu-trigger-bar {
-      &:before {
-        width: 100%;
-      }
+    @media ${device.tablet} {
+      top: -8px;
     }
   }
 
-  .menu-trigger-bar {
-    display: block;
-    width: 100%;
-    height: 4px;
-    background-color: #fff;
-    margin-bottom: 6px;
-    transform: rotate(-45deg);
-    position: relative;
+  &:hover ${NavIcon}:after {
+    top: 10px;
 
-    &:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: block;
-      width: 0%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.2);
-      transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
-    }
-
-    &.top {
-      width: 50%;
-    }
-    &.middle {
-      &:before {
-        left: auto;
-        right: 0;
-      }
-    }
-    &.bottom {
-      width: 50%;
-      margin-left: 50%;
+    @media ${device.tablet} {
+      top: 8px;
     }
   }
 `;
 
-const InnerContainer = styled.div`
-  position: fixed;
-  display: none;
-  height: 100vh;
-  width: 100%;
-  left: 0;
-  top: 0;
-  overflow: hidden;
-  z-index: 20;
+const NavIcon = styled.span`
+  position: relative;
+  margin-top: 28px;
 
-  .menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-    opacity: 0;
-    visibility: hidden;
+  @media ${device.tablet} {
+    margin-top: 20px;
+  }
 
-    li {
-      display: block;
-      padding: 15px 0;
-      font-family: 'Varela Round';
-      font-size: 50px;
-      text-transform: uppercase;
+  &,
+  &:before,
+  &:after {
+    width: 30px;
+    height: 2px;
+    background-color: #333;
+    display: inline-block;
 
-      span {
-        cursor: pointer;
-      }
-
-      .text-underline {
-        text-decoration: none;
-        color: #fff;
-        display: inline-block;
-        padding: 1px;
-        position: relative;
-
-        &:hover {
-          color: #fc3565;
-          transition: color 1s ease;
-
-          &:after {
-            width: 100%;
-            background: #fc3565;
-          }
-        }
-
-        &:focus {
-          &:after {
-            width: 100%;
-            background: #fc3565;
-          }
-        }
-
-        &:after {
-          content: '';
-          height: 5px;
-          left: 0;
-          bottom: 10px;
-          width: 1px;
-          position: absolute;
-          transition: width 1s ease, background-color 1s ease;
-          right: 0;
-          margin: 0 auto;
-        }
-      }
+    @media ${device.tablet} {
+      width: 22px;
     }
   }
 
-  .menu-bg {
+  &:before,
+  &:after {
+    content: '';
     position: absolute;
-    display: block;
-    width: 200%;
-    left: -53%;
-    top: -25%;
-    height: 65%;
-    background-color: #49738d;
+    left: 0;
+    transition: all 0.2s;
+  }
 
-    &.middle {
-      top: 29%;
-      left: -55%;
-      transform: rotate(-45deg) scaleY(0);
+  &::before {
+    top: -8px;
+
+    @media ${device.tablet} {
+      top: -6px;
     }
-    &.top {
-      left: -80%;
-      top: 0;
-      height: 69%;
-      transform: rotate(-45deg) translateY(-152%);
-    }
-    &.bottom {
-      top: 135%;
-      left: -20%;
-      transform: rotate(-45deg) translateY(25%);
+  }
+  &::after {
+    top: 8px;
+
+    @media ${device.tablet} {
+      top: 6px;
     }
   }
 `;
 
-const CloseTrigger = styled.div`
+const Nav = styled.nav`
+  height: 100vh;
   position: fixed;
-  top: 35px;
-  right: 35px;
-  display: block;
-  width: 42px;
-  height: 42px;
+  top: 0;
+  left: -95%;
+  z-index: 1500;
+  opacity: 0;
+  width: 0;
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+`;
+
+const NavList = styled.ul`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(45%, -50%);
+  list-style: none;
+  text-align: center;
+  width: 100%;
+  transition: all 0.4s;
+`;
+
+const NavItem = styled.li`
+  margin: 10px;
+`;
+
+const NavLink = styled.span`
+  display: inline-block;
+  font-size: 40px;
+  font-weight: 700;
+  padding: 10px 20px;
+  color: #fff;
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    105deg,
+    transparent 0%,
+    transparent 50%,
+    #fff 50%
+  );
+  background-size: 220%;
+  transition: all 0.4s;
   cursor: pointer;
-  z-index: 3;
 
   &:hover {
-    .close-trigger-bar {
-      &:before {
-        width: 100%;
-      }
-    }
-  }
-
-  .close-trigger-bar {
-    display: block;
-    width: 100%;
-    height: 4px;
-    background-color: #fff;
-    position: relative;
-
-    &:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: block;
-      width: 0%;
-      height: 100%;
-      background-color: #fc3565;
-      transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
-    }
-
-    &.left {
-      transform: translateX(100px) translateY(-100px) rotate(-45deg);
-    }
-    &.right {
-      transform: translateX(-100px) translateY(-100px) rotate(45deg);
-      top: -3px;
-    }
+    background-position: 100%;
+    color: #fc3565;
   }
 `;
 
-export { NavMenu, InnerContainer, CloseTrigger };
+const NavInput = styled.input`
+  display: none;
+
+  &:checked + ${NavButton} ${NavIcon} {
+    background-color: transparent;
+  }
+
+  &:checked + ${NavButton} ${NavIcon}:before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  &:checked + ${NavButton} ${NavIcon}:after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+
+  &:checked ~ ${NavBackground} {
+    transform: scale(120);
+  }
+
+  &:checked ~ ${Nav} {
+    opacity: 1;
+    width: 100%;
+  }
+
+  /* &:checked ~ ${Nav} ${NavList} {
+    top: 50%;
+  } */
+`;
+
+export {
+  Container,
+  NavBackground,
+  NavButton,
+  NavIcon,
+  Nav,
+  NavList,
+  NavItem,
+  NavLink,
+  NavInput
+};

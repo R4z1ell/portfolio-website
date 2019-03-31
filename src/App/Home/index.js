@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { scroller } from 'react-scroll';
 import start from '../../../utils/starfield';
 
 import GlobalStyle from '../../shared/GlobalStyle';
@@ -21,6 +22,13 @@ const Home = () => {
     }, 200);
   }, []);
 
+  const scrollToElement = element => {
+    scroller.scrollTo(element, {
+      duration: 1500,
+      smooth: true
+    });
+  };
+
   return (
     <React.Fragment>
       <GlobalStyle />
@@ -35,8 +43,12 @@ const Home = () => {
             I'm a Full-stack Web Developer from Italy.
           </Text>
           <Wrapper>
-            <BtnProject>My Projects</BtnProject>
-            <Button>Contact me</Button>
+            <BtnProject onClick={() => scrollToElement('Projects')}>
+              My Projects
+            </BtnProject>
+            <Button onClick={() => scrollToElement('Contact')}>
+              Contact me
+            </Button>
           </Wrapper>
         </Flex>
       </SectionHome>

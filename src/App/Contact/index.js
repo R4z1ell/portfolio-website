@@ -18,11 +18,21 @@ const Contact = () => {
             <Form autoComplete="off" onSubmit={submitHandler}>
               <ul>
                 <li>
-                  <input type="text" name="name" placeholder="Name" />
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                    spellCheck="false"
+                  />
                   <Label bottom="0px" />
                 </li>
                 <li>
-                  <input type="email" name="email" placeholder="Email" />
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    spellCheck="false"
+                  />
                   <Label bottom="0px" />
                 </li>
                 <li>
@@ -30,6 +40,7 @@ const Contact = () => {
                     type="text"
                     name="message"
                     placeholder="Your message"
+                    spellCheck="false"
                   />
                   <Label bottom="8px" />
                 </li>

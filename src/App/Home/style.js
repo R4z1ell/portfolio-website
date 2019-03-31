@@ -86,6 +86,7 @@ const Button = styled.button`
   color: #fff;
   cursor: pointer;
   border: 2px solid #fff;
+  outline: none;
   z-index: 1;
   transition: all 0.5s;
   position: relative;

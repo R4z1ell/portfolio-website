@@ -1,10 +1,9 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import Slide from 'react-reveal/Slide';
 import withReveal from 'react-reveal/withReveal';
 import { device } from '../../shared/MediaQueries';
 
 const Background = styled.div`
-  height: calc(100vh - 111px);
   background-image: url('/static/Endless-Constellation.svg');
 `;
 
