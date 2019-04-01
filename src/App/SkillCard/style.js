@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from '../../shared/MediaQueries';
 
 let colors = {
   html: '#e44d26',
@@ -11,6 +12,18 @@ let colors = {
 const CardWrapper = styled.div`
   width: 100px;
   cursor: pointer;
+
+  @media ${device.tabletS} {
+    width: 85px;
+  }
+
+  @media ${device.phone} {
+    width: 65px;
+  }
+
+  @media ${device.mobileL} {
+    width: 90px;
+  }
 
   &:hover li:nth-child(11) {
     background: ${props => colors[props.skillName]};
@@ -161,6 +174,18 @@ const CardWrapper = styled.div`
     margin-bottom: 0px;
     text-align: center;
     transition: all 2s ease;
+
+    @media ${device.tabletS} {
+      height: 90px;
+    }
+
+    @media ${device.phone} {
+      height: 75px;
+    }
+
+    @media ${device.mobileL} {
+      height: 90px;
+    }
   }
 
   .js svg {

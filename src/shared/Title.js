@@ -20,6 +20,10 @@ const Title = withReveal(
     @media ${device.phone} {
       font-size: 36px;
     }
+
+    @media ${device.mobileS} {
+      font-size: 30px;
+    }
   `,
   <Slide right ssrReveal={true} />
 );

@@ -22,6 +22,7 @@ const Projects = () => {
                 skillThree="mongodb"
                 image="/static/jetdeals.png"
                 marginRight="60px"
+                path="https://github.com/R4z1ell/react-game-store"
               />
             </Bounce>
             <Bounce bottom ssrReveal={true}>
@@ -33,6 +34,7 @@ const Projects = () => {
                 skillThree="api"
                 image="/static/nuxt-cinema.png"
                 marginRight="60px"
+                path="https://github.com/R4z1ell/nuxt-cinema"
               />
             </Bounce>
             <Bounce right ssrReveal={true}>
@@ -43,6 +45,7 @@ const Projects = () => {
                 skillTwo="css3"
                 skillThree="sass"
                 image="/static/sensation.png"
+                path="https://github.com/R4z1ell/Sensation"
               />
             </Bounce>
           </div>

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from '../../shared/MediaQueries';
 
 const colors = {
   jetdeals: '#1572b6',
@@ -27,6 +28,35 @@ const CardWrapper = styled.div`
   border: 2px solid ${props => colors[props.color]};
   margin-right: ${props => props.marginRight};
 
+  @media ${device.mobileM} {
+    width: 325px;
+
+    .btn-wrapper {
+      a:nth-child(1) {
+        left: 60px;
+      }
+
+      a:nth-child(2) {
+        left: 166px;
+      }
+    }
+  }
+
+  @media ${device.mobileS} {
+    width: 280px;
+    height: 475px;
+
+    .btn-wrapper {
+      a:nth-child(1) {
+        left: 14%;
+      }
+
+      a:nth-child(2) {
+        left: 52%;
+      }
+    }
+  }
+
   .image {
     width: 100%;
     height: 68.8%;
@@ -35,6 +65,10 @@ const CardWrapper = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+
+    @media ${device.mobileS} {
+      margin-top: 9px;
+    }
   }
 `;
 
@@ -44,11 +78,19 @@ const Flex = styled.div`
   align-items: center;
   justify-content: center;
 
+  @media ${device.mobileS} {
+    flex-direction: column;
+  }
+
   h3 {
     font-size: 24px;
     font-weight: 700;
     color: ${props => colors[props.color]};
     margin-right: ${props => margins[props.color]};
+
+    @media ${device.mobileS} {
+      margin-right: 0;
+    }
   }
 
   span {
@@ -66,10 +108,14 @@ const Flex = styled.div`
   .tech-wrapper {
     line-height: 20px;
     margin-bottom: 1px;
+
+    @media ${device.mobileS} {
+      margin-left: 5px;
+    }
   }
 `;
 
-const Button = styled.button`
+const Button = styled.a`
   background: ${props => colors[props.color]};
   color: white;
   border: none;
@@ -87,6 +133,14 @@ const Button = styled.button`
   position: absolute;
   bottom: 25px;
   left: ${props => (props.source ? '179px' : '68px')};
+
+  @media ${device.mobileM} {
+    bottom: 5%;
+  }
+
+  @media ${device.mobileS} {
+    bottom: 3.5%;
+  }
 
   &:active {
     bottom: 23px;

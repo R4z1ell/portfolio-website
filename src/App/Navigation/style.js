@@ -154,6 +154,14 @@ const NavLink = styled.span`
   transition: all 0.4s;
   cursor: pointer;
 
+  @media ${device.phone} {
+    font-size: 34px;
+  }
+
+  @media ${device.mobileM} {
+    font-size: 30px;
+  }
+
   &:hover {
     background-position: 100%;
     color: #fc3565;

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from '../../shared/MediaQueries';
 
 const SkillsContainer = styled.div`
   background-color: #313440;
@@ -8,6 +9,20 @@ const SkillsContainer = styled.div`
   font-family: Inconsolata;
   font-weight: bold;
 
+  @media ${device.mobileL} {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  @media ${device.mobileM} {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  @media ${device.mobileS} {
+    width: 100%;
+  }
+
   .comment {
     color: #5c6370;
     font-style: italic;
@@ -16,6 +31,10 @@ const SkillsContainer = styled.div`
   .content {
     padding: 20px 0 20px 10px;
     font-size: 17px;
+
+    @media ${device.mobileL} {
+      font-size: 16px;
+    }
   }
 
   .linenumber {
@@ -32,6 +51,10 @@ const SkillsContainer = styled.div`
     text-align: center;
     font-size: 20px;
     word-wrap: break-word;
+
+    @media ${device.mobileL} {
+      font-size: 16px;
+    }
 
     &:after {
       position: absolute;

@@ -30,6 +30,26 @@ const Flex = styled.div`
   .about-wrapper {
     width: 41%;
     text-align: center;
+
+    @media ${device.desktopL} {
+      width: 47%;
+    }
+
+    @media ${device.desktopM} {
+      width: 57%;
+    }
+
+    @media ${device.desktopS} {
+      width: 60%;
+    }
+
+    @media ${device.tablet} {
+      width: 70%;
+    }
+
+    @media ${device.tabletM} {
+      width: 75%;
+    }
   }
 
   .skills-wrapper {
@@ -42,10 +62,30 @@ const Flex = styled.div`
     @media (max-width: 1430px) {
       width: 580px;
     }
+
+    @media ${device.tabletM} {
+      width: 540px;
+    }
+
+    @media ${device.tabletS} {
+      width: 460px;
+    }
+
+    @media ${device.phone} {
+      width: 360px;
+    }
+
+    @media ${device.mobileS} {
+      width: 280px;
+    }
   }
 
   img {
     max-width: 80%;
+
+    @media ${device.desktopB} {
+      width: 320px;
+    }
   }
 
   p {
@@ -53,6 +93,21 @@ const Flex = styled.div`
     font-size: 19px;
     margin-top: 45px;
     line-height: 31px;
+
+    @media ${device.tabletS} {
+      font-size: 18px;
+      line-height: 29px;
+    }
+
+    @media ${device.phone} {
+      font-size: 17px;
+      line-height: 27px;
+    }
+
+    @media ${device.mobileS} {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 `;
 
@@ -60,6 +115,48 @@ const CardsWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 75px;
+
+  @media ${device.mobileL} {
+    display: grid;
+    grid-template-columns: repeat(12, 30px);
+    grid-row-gap: 35px;
+    justify-items: center;
+
+    div:nth-child(1) {
+      grid-column: 4;
+    }
+
+    div:nth-child(2) {
+      grid-column: 9;
+    }
+
+    div:nth-child(3) {
+      grid-column: 4;
+      grid-row-start: 2;
+    }
+
+    div:nth-child(4) {
+      grid-column: 9;
+      grid-row-start: 2;
+    }
+
+    div:nth-child(5) {
+      grid-column: 7;
+      grid-row-start: 3;
+      margin-right: 100%;
+    }
+  }
+
+  @media ${device.mobileS} {
+    grid-template-columns: repeat(12, 23.3px);
+
+    div:nth-child(5) {
+      grid-column: 6;
+      grid-row-start: 3;
+      margin-left: 100%;
+      margin-right: 0%;
+    }
+  }
 `;
 
 export { Background, Wrapper, Flex, CardsWrapper };

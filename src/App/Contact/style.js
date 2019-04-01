@@ -26,6 +26,10 @@ const Wrapper = styled.div`
       font-size: 18px;
     }
 
+    @media ${device.mobileM} {
+      font-size: 17px;
+    }
+
     &:focus {
       outline: none;
 
@@ -60,6 +64,10 @@ const Wrapper = styled.div`
 
     @media ${device.tabletS} {
       font-size: 18px;
+    }
+
+    @media ${device.mobileM} {
+      font-size: 17px;
     }
 
     &:focus {
@@ -102,15 +110,33 @@ const Highlight = withReveal(
     margin-bottom: 40px;
 
     @media ${device.tablet} {
-      font-size: 20px;
+      font-size: 22px;
     }
 
     @media ${device.tabletM} {
-      font-size: 18px;
+      font-size: 21px;
     }
 
     @media ${device.tabletS} {
-      font-size: 16px;
+      font-size: 20px;
+    }
+
+    @media ${device.mobileL} {
+      line-height: 25px;
+      margin-left: 9%;
+      margin-right: 9%;
+    }
+
+    @media ${device.mobileM} {
+      font-size: 19px;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+
+    @media ${device.mobileS} {
+      font-size: 17px;
+      margin-left: 9%;
+      margin-right: 9%;
     }
   `,
   <Slide top ssrReveal={true} />
@@ -130,6 +156,10 @@ const Button = styled.button`
 
   @media ${device.tabletS} {
     font-size: 20px;
+  }
+
+  @media ${device.mobileM} {
+    font-size: 17px;
   }
 
   &:active {

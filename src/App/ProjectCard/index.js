@@ -19,12 +19,18 @@ const ProjectCard = props => {
         </div>
       </Flex>
       <div className="image" />
-      <div>
+      <div className="btn-wrapper">
         <Button color={props.color} shadow={props.color}>
           <SVG src="/static/icon.svg" />
           website
         </Button>
-        <Button source color={props.color} shadow={props.color}>
+        <Button
+          source
+          color={props.color}
+          shadow={props.color}
+          href={props.path}
+          target="_blank"
+        >
           <SVG src="/static/source.svg" />
           source
         </Button>
