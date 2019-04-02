@@ -49,8 +49,8 @@ const Contact = () => {
     }
 
     if (event.target.name === 'message') {
+      setInputTextArea(event.target.value);
       if (event.target.value !== '') {
-        setInputTextArea(event.target.value);
         setErrorInputTextArea(false);
       }
     }
