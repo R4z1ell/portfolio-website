@@ -24,7 +24,7 @@ const Copyright = styled.div`
   }
 `;
 
-const Social = styled.div`
+const Social = styled.a`
   position: absolute;
   top: -60px;
   left: ${props => props.left};
@@ -32,7 +32,12 @@ const Social = styled.div`
   width: 40px;
   background-color: #fc3565;
   transform: rotate(45deg);
+  transition: all 0.5s;
   cursor: pointer;
+
+  &:hover {
+    background-color: #04c2c9;
+  }
 
   svg {
     fill: #fff;

@@ -8,7 +8,7 @@ const Background = styled.div`
 `;
 
 const Wrapper = styled.div`
-  padding: 130px 0px 157px 0px;
+  padding: 160px 0px 157px 0px;
   font-family: 'Ubuntu';
 
   input[type='text'],
@@ -48,6 +48,15 @@ const Wrapper = styled.div`
 
     &:nth-child(3) {
       margin-bottom: 0px;
+    }
+
+    &:nth-child(4) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: -2px;
+      height: 0;
+      transition: all 0.25s;
     }
   }
 
@@ -93,8 +102,10 @@ const Label = styled.label`
 
   &:after {
     margin-top: 2px;
-    border-bottom: 2px solid #04c2c9;
-    transform: translate3d(-100%, 0, 0);
+    border-bottom: ${props =>
+      props.labelError ? '2px solid #d12a10' : '2px solid #04c2c9'};
+    transform: ${props =>
+      props.labelError ? 'translate3d(0, 0, 0)' : 'translate3d(-100%, 0, 0)'};
     transition: transform 0.5s;
   }
 `;
@@ -180,4 +191,37 @@ const Form = styled.form`
   }
 `;
 
-export { Background, Wrapper, Highlight, Button, Label, Form };
+const ErrorMessage = styled.li`
+  background-color: ${props => (props.success ? '#04c986' : '#cb2424')};
+  border: ${props =>
+    props.success ? '1px solid #157c59' : '1px solid #b62020'};
+  height: 45px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 17px;
+  opacity: 0;
+
+  @media ${device.mobileL} {
+    font-size: 16px;
+  }
+
+  @media ${device.mobileM} {
+    font-size: 15px;
+  }
+
+  @media ${device.mobileS} {
+    font-size: 13px;
+  }
+
+  div span svg {
+    width: 11px;
+    height: 11px;
+    fill: #fff;
+    position: absolute;
+    top: 38%;
+    right: 3%;
+    cursor: pointer;
+  }
+`;
+
+export { Background, Wrapper, Highlight, Button, Label, Form, ErrorMessage };
