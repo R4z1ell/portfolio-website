@@ -17,6 +17,7 @@ import {
 
 const Home = () => {
   useEffect(() => {
+    window.addEventListener('resize', start);
     setTimeout(() => {
       start();
     }, 200);
