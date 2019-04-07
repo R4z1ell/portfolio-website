@@ -193,10 +193,6 @@ const NavInput = styled.input`
     opacity: 1;
     width: 100%;
   }
-
-  /* &:checked ~ ${Nav} ${NavList} {
-    top: 50%;
-  } */
 `;
 
 export {

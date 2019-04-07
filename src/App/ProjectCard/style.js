@@ -16,7 +16,7 @@ const shadows = {
 const margins = {
   jetdeals: '20px',
   cinema: '17px',
-  sensation: '31px'
+  sensation: '17px'
 };
 
 const CardWrapper = styled.div`

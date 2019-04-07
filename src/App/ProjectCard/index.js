@@ -15,7 +15,7 @@ const ProjectCard = props => {
         <div className="tech-wrapper">
           <span>{props.skillOne}</span>
           <span>{props.skillTwo}</span>
-          <span>{props.skillThree}</span>
+          {props.skillThree ? <span>{props.skillThree}</span> : null}
         </div>
       </Flex>
       <div className="image" />

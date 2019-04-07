@@ -30,7 +30,7 @@ const Projects = () => {
                 color="cinema"
                 title="Nuxt-Cinema"
                 skillOne="nuxt.js"
-                skillTwo="sass"
+                skillTwo="scss"
                 skillThree="api"
                 image="/static/nuxt-cinema.png"
                 marginRight="60px"
@@ -41,11 +41,10 @@ const Projects = () => {
               <ProjectCard
                 color="sensation"
                 title="Sensation"
-                skillOne="html5"
-                skillTwo="css3"
-                skillThree="sass"
+                skillOne="react"
+                skillTwo="styled-components"
                 image="/static/sensation.png"
-                path="https://github.com/R4z1ell/Sensation"
+                path="https://github.com/R4z1ell/Sensation---remade"
               />
             </Bounce>
           </div>
